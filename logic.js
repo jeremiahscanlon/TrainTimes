@@ -9,6 +9,11 @@ $("#submit").on("click", function() {
 	var firstTrain = $('#firstTrain').val().trim();
 	var frequency = $('#frequency').val().trim();
 
+	$('#name').val('');
+	$('#destination').val('');
+	$('#firstTrain').val('');
+	$('#frequency').val('');
+
 	// send the variables through the function that writes them to the firebase
 	writenewRecord(name, destination, firstTrain, frequency);
 
@@ -85,7 +90,6 @@ db.on("child_added", function(snapshot, prechildKey){
 	$("#trainTable").append("<tr><td>" + name + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextArrival + "</td><td>" + minAway + "</td></tr>");
 
 });
-
 
 // display the current time using moment.js
 function startTime() {
