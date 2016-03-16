@@ -1,0 +1,21 @@
+html, body {
+	font-family: 'Varela Round', sans-serif;
+	height: 100%;
+}
+
+.jumbotron {
+	background-color: black;
+	color: white;
+	padding: 30px 50px;
+}
+
+.panel-default {
+	border-color: #457EFF;
+}
+
+#time {
+	font-size: 60px;
+	float: right;
+	position: relative;
+	top: -100px;
+}

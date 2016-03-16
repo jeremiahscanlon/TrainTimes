@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<title>Train Times</title>
+	<!-- google fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Poiret+One|Varela+Round' rel='stylesheet' type='text/css'>
+	<!-- reset style sheet -->
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- My custom style sheet -->
+	<link rel="stylesheet" href="style.css">
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- bootstrap js and jquery -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<!-- link to firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+	<!-- moment.js -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	
+
+</head>
+<body>
+
+<div class="jumbotron">
+	<h1>Train Times</h1>
+	<h4>Don't miss the next opportunity</h4>
+	<!-- TIME ID div used to display clock -->
+	<div id="time"></div>
+</div>
+
+<div class="container">
+	<div class="row">
+		
+
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading">		
+					Upcoming Train Schedule
+				</div>
+
+				<div class="panel-body">
+					<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th>Train Name</th>
+							<th>Desination</th>
+							<th>Frequency (min)</th>
+							<th>Next Arrival</th>
+							<th>Miutes Away</th>
+						</tr>
+					</thead>
+					<tbody id="trainTable"></tbody>
+				</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="panel panel-default">
+				<div class="panel-heading">		
+					Add Train
+				</div>
+
+				<div class="panel-body">
+				
+					<form>
+
+						<div class="form-group">
+							<label for="name">Train Name</label>
+							<input type="text" class="form-control" id="name" placeholder="">
+						</div>
+					
+						<div class="form-group">
+							<label for="role">Destination</label>
+							<input type="text" class="form-control" id="destination" placeholder="">
+						</div>
+
+						<div class="form-group">
+							<label for="dates">First Train of the Day (HH:mm - military time)</label>
+							<input type="text" class="form-control" id="firstTrain" placeholder="">
+						</div>
+
+						<div class="form-group">
+							<label for="rate">Frequency (min)</label>
+							<input type="text" class="form-control" id="frequency" placeholder="">
+						</div>	
+					
+						<button type="submit" class="btn btn-primary" id="submit">Submit</button>
+						
+					</form>
+			
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+
+<!-- script tag here -->
+<script src="logic.js"></script>
+</html>
+
+
